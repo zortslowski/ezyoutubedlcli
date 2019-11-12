@@ -1,0 +1,64 @@
+{
+	"name": "tubgui",
+	"version": "0.0.0",
+	"license": "MIT",
+	"bin": "cli.js",
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"cli.js",
+		"ui.js"
+	],
+	"dependencies": {
+		"import-jsx": "^3.0.0",
+		"ink": "^2.5.0",
+		"ink-select-input": "^3.1.2",
+		"ink-text-input": "^3.2.1",
+		"meow": "^5.0.0",
+		"prop-types": "^15.7.2",
+		"react": "^16.11.0"
+	},
+	"devDependencies": {
+		"@babel/preset-react": "^7.6.3",
+		"@babel/register": "^7.6.2",
+		"ava": "^2.4.0",
+		"chalk": "^2.4.2",
+		"eslint": "^6.6.0",
+		"eslint-config-airbnb": "^18.0.1",
+		"eslint-config-prettier": "^6.5.0",
+		"eslint-config-xo-react": "^0.20.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.1.1",
+		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-react-hooks": "^1.7.0",
+		"ink-testing-library": "^1.0.2",
+		"prettier": "^1.18.2",
+		"xo": "^0.25.3"
+	},
+	"ava": {
+		"require": [
+			"@babel/register"
+		]
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-react",
+			[
+				"@babel/preset-env",
+				{
+					"targets": {
+						"node": true
+					}
+				}
+			]
+		]
+	},
+	"xo": {
+		"extends": "xo-react"
+	}
+}
